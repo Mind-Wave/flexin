@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:flex_test" 
+             x:Class="flex_test.MainPage">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout WidthRequest="0" IsVisible="true" HorizontalOptions="FillAndExpand" BackgroundColor="Red" x:Name="sidemenu" Grid.Column="0"/>
+        <ScrollView Grid.Column="1">
+            <StackLayout VerticalOptions="Fill">
+                <FlexLayout x:Name="flex" Wrap="Wrap" Direction="Row" JustifyContent="Start" VerticalOptions="Fill"/>                  
+            </StackLayout>
+        </ScrollView>
+        <StackLayout WidthRequest="0" IsVisible="true" HorizontalOptions="FillAndExpand" BackgroundColor="Fuchsia" x:Name="broker" Grid.Column="2"/>
+     </Grid>
+</ContentPage>
